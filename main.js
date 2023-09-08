@@ -3,7 +3,7 @@ const Time = document.getElementById("currentUTCTime")
 const Day = document.getElementById("currentDay");
 
 const currentDate = new Date();
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const currentDay = daysOfWeek[currentDate.getDay()];
 const currentTimeInMilliseconds = currentDate.getTime();
 
