@@ -1,9 +1,14 @@
-function updateDateTime() {
-    const dayOfWeek = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-    const utcTime = new Date().toUTCString();
-    
-    document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = dayOfWeek;
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTime;
-}
+const Time = document.getElementById("currentUTCTime")
+
+const Day = document.getElementById("currentDay");
+
+const currentDate = new Date();
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const currentDay = daysOfWeek[currentDate.getDay()];
+const currentTimeInMilliseconds = currentDate.getTime();
+
+Day.innerHTML = `<strong>Current Day: </strong> ${currentDay}`;
+Time.innerHTML = `<strong>Current Time (in milliseconds):</strong> ${currentTimeInMilliseconds}`;
 
 setInterval(updateDateTime, 1000);
+//   update every second
