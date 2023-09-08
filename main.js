@@ -1,6 +1,6 @@
 function updateDateTime() {
     const dayOfWeek = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-    const utcTime = new Date().toLocaleTimeString();
+    const utcTime = new Date().toUTCString();
     
     document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = dayOfWeek;
     document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTime;
