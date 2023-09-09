@@ -18,7 +18,7 @@ function updateCurrentDayOfTheWeek() {
 // Function to update the current UTC time
 
 function updateCurrentUTCTime() {
-  const currentMillis = new Date().getTime();
+  const currentMillis = Date.now();
   document.querySelector('[data-testid="currentUTCTime"]').textContent =
     currentMillis;
 }
